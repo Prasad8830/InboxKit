@@ -120,5 +120,6 @@ NEXT_PUBLIC_BACKEND_URL=http://localhost:4000
 ## 📡 API Endpoints
 
 GET /api/tiles
+```
 Response: Array of all 400 tiles with their current state
 ```
