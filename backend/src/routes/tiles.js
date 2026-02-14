@@ -18,9 +18,10 @@ export default function (tileService, io) {
   router.post('/clear', async (req, res) => {
     try {
       const { username } = req.body;
+      const adminUsername = process.env.ADMIN_USERNAME || 'prasad';
       
       // Check if user is admin
-      if (username !== 'prasad') {
+      if (username !== adminUsername) {
         return res.status(403).json({ error: 'Unauthorized: Admin access only' });
       }
 

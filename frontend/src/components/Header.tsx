@@ -48,7 +48,7 @@ export default function Header({
           </div>
 
           {/* Clear Grid Button - Admin Only */}
-          {username === 'prasad' && onClearGrid && (
+          {username === (process.env.NEXT_PUBLIC_ADMIN_USERNAME || 'prasad') && onClearGrid && (
             <button
               onClick={onClearGrid}
               className="flex items-center gap-2 px-3 py-1.5 sm:px-4 sm:py-2 bg-orange-500/20 hover:bg-orange-500/30 rounded-lg border border-orange-500/30 hover:border-orange-500/50 transition-all duration-200 group"
